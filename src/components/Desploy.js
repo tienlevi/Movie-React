@@ -6,16 +6,16 @@ function Desploy() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    const fetchMovie = async () => {
-      const movieList = await movieApi.getAll();
-      console.log(movieList);
-      setPosts(movieList);
-    };
+    // const fetchMovie = async () => {
+    //   const movieList = await movieApi.getAll();
+    //   console.log(movieList);
+    //   setPosts(movieList);
+    // };
 
-    fetchMovie();
-    // fetch("https://testapi-xfl4.onrender.com/List/")
-    //   .then((res) => res.json())
-    //   .then((res) => setPosts(res));
+    // fetchMovie();
+    fetch("https://api.themoviedb.org/8d12775adaf4e75ea96c81ec66ddd3fe")
+      .then((res) => res.json())
+      .then((res) => console.log(res));
   }, []);
 
   return (
